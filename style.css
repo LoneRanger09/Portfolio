@@ -1,0 +1,80 @@
+:root {
+    --primary-bg: #1a1a1a;
+    --secondary-bg: #2d2d2d;
+    --accent-color: #4f46e5;
+    --accent-hover: #6366f1;
+    --gradient-start: #4f46e5;
+    --gradient-end: #7c3aed;
+    --text-primary: #f8fafc;
+    --text-secondary: #e2e8f0;
+    --card-shadow: rgba(79, 70, 229, 0.1);
+  }
+
+  body {
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+  }
+
+  .bg-gray-800 {
+    background-color: var(--secondary-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+  }
+
+  .text-yellow-400,
+  .text-yellow-300 {
+    color: var(--accent-color);
+  }
+
+  .hover\:text-yellow-400:hover {
+    color: var(--accent-hover);
+  }
+
+  .bg-yellow-400 {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  }
+
+  .hover\:bg-yellow-300:hover {
+    background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
+    opacity: 0.9;
+  }
+
+  .sBox {
+    box-shadow: 0 4px 6px var(--card-shadow);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sBox:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(79, 70, 229, 0.2);
+  }
+
+  .sBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.75rem;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+  }
+
+  .sBox:hover::before {
+    border-color: var(--accent-color);
+  }
+
+  .progress-bar {
+    background: rgba(79, 70, 229, 0.2);
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+
+  .bg-yellow-400.rounded-full {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  }
