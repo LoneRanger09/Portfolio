@@ -23,14 +23,18 @@ export function TerminalWindow({ onCommand }) {
         { type: "out", text: `arnav-os 0.26 — type 'help' to see commands` },
     ]);
     const [input, setInput] = useState("");
-    const endRef = useRef(null);
+    const scrollRef = useRef(null);
+    const inputRef = useRef(null);
 
-    useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [history]);
+    // Auto-scroll only the terminal's own container (not the page/window).
+    useEffect(() => {
+        const el = scrollRef.current;
+        if (el) el.scrollTop = el.scrollHeight;
+    }, [history]);
 
     const run = (raw) => {
         const cmd = raw.trim().toLowerCase();
         const out = (text) => setHistory((h) => [...h, { type: "in", text: raw }, { type: "out", text }]);
-        const push = (text) => setHistory((h) => [...h, { type: "out", text }]);
 
         if (!cmd) {
             setHistory((h) => [...h, { type: "in", text: "" }]);
@@ -54,31 +58,45 @@ export function TerminalWindow({ onCommand }) {
     };
 
     return (
-        <div data-testid="terminal-window" className="relative crt bg-term-bg text-term-text font-mono text-sm p-4 min-h-[320px] h-full">
-            <div className="font-pixel text-cream text-2xl mb-2">arnav@portfolio:~$</div>
-            <div className="space-y-0.5">
+        <div
+            data-testid="terminal-window"
+            className="relative crt bg-term-bg text-term-text font-mono text-sm h-full flex flex-col min-h-[320px]"
+            onClick={() => inputRef.current?.focus()}
+        >
+            <div className="px-4 pt-4 pb-1 font-pixel text-cream text-2xl shrink-0">
+                arnav@portfolio:~$
+            </div>
+
+            {/* Scrollable history — only this scrolls */}
+            <div
+                ref={scrollRef}
+                className="flex-1 overflow-y-auto win-scroll px-4 space-y-0.5"
+                style={{ overscrollBehavior: "contain" }}
+            >
                 {history.map((h, i) =>
                     h.type === "in" ? (
                         <div key={i}><span className="text-mustard">$</span> {h.text}</div>
                     ) : (
-                        <pre key={i} className="whitespace-pre-wrap text-term-text">{h.text}</pre>
+                        <pre key={i} className="whitespace-pre-wrap text-term-text m-0">{h.text}</pre>
                     )
                 )}
-                <form
-                    onSubmit={(e) => { e.preventDefault(); run(input); setInput(""); }}
-                    className="flex items-center gap-2"
-                >
-                    <span className="text-mustard">$</span>
-                    <input
-                        data-testid="terminal-input"
-                        autoFocus
-                        value={input}
-                        onChange={(e) => setInput(e.target.value)}
-                        className="flex-1 bg-transparent outline-none text-term-text caret-term-text"
-                    />
-                </form>
-                <div ref={endRef} />
             </div>
+
+            {/* Sticky input row */}
+            <form
+                onSubmit={(e) => { e.preventDefault(); run(input); setInput(""); }}
+                className="flex items-center gap-2 px-4 py-2 border-t border-term-text/30 shrink-0"
+            >
+                <span className="text-mustard">$</span>
+                <input
+                    ref={inputRef}
+                    data-testid="terminal-input"
+                    autoFocus
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    className="flex-1 bg-transparent outline-none text-term-text caret-term-text"
+                />
+            </form>
         </div>
     );
 }
