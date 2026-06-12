@@ -1,0 +1,73 @@
+{
+  "theme": "Light",
+  "archetype": "Retro Organic Desktop (Mix of 1 & 4)",
+  "colors": {
+    "desktop_bg": "#F9F6F0",
+    "grid_lines": "rgba(127, 135, 102, 0.2)",
+    "window_bg": "#E5E0D8",
+    "window_content_bg": "#FAFAF7",
+    "primary_olive": "#7F8766",
+    "primary_olive_hover": "#6B7355",
+    "text_dark_gray": "#333333",
+    "text_muted": "#666666",
+    "accent_coral": "#E07A5F",
+    "accent_yellow": "#E9C46A",
+    "danger_red": "#D62828",
+    "terminal_bg": "#1E1E1E",
+    "terminal_text": "#4AF626"
+  },
+  "typography": {
+    "heading_font": "'VT323', monospace",
+    "body_font": "'IBM Plex Sans', sans-serif",
+    "mono_font": "'Space Mono', monospace"
+  },
+  "spacing_and_layout": {
+    "desktop": "100vw 100vh, overflow-hidden. Background grid created using linear-gradient at 24px or 32px size.",
+    "window_borders": "2px solid #333333 (Dark Gray) for high contrast and retro structural feel.",
+    "window_shadows": "Hard drop-shadow: 4px 4px 0px rgba(51, 51, 51, 0.5) to simulate retro 3D depth.",
+    "border_radius": "Sharp edges (rounded-none) or very subtle (rounded-sm) to match vintage OS aesthetics.",
+    "padding": "Generous inside windows (p-6) to maintain readability despite retro framing."
+  },
+  "interactive_elements": {
+    "windows": {
+      "library": "framer-motion",
+      "logic": "Use motion.div with drag attributes. dragConstraints bound to the main desktop ref. dragMomentum={false}.",
+      "drag_handle": "Restrict dragging to the custom olive green window title bar to avoid interference with inner content.",
+      "transitions": "Use layout animations with AnimatePresence for open/close and minimize/maximize states. Spring stiffness 300, damping 30."
+    },
+    "folder_icons": {
+      "style": "Use react-icons (FcFolder) or Lucide folder icons heavily styled with yellow/gold. Placed on the desktop in a grid layout.",
+      "hover": "Hover state should slightly scale up (scale-105) and highlight the folder text."
+    },
+    "buttons": "Retro inset/outset borders or flat with a sharp 2px dark border and a solid background color (Olive or Coral)."
+  },
+  "features": {
+    "desktop_icons": [
+      "About Me", "Projects", "Skills", "Experience", "Certifications", "Resume", "Achievements", "Contact", "Terminal"
+    ],
+    "terminal": "Interactive fake CLI. Maintain history in state. Commands required: help, about, skills, projects, resume, contact, clear.",
+    "recruiter_mode": "A specialized 60-second summary dashboard. High data density, clean charts (Shadcn/Recharts), single-page layout within a window.",
+    "command_palette": "Implemented via cmdk (Ctrl+K). Matches the beige/olive color scheme.",
+    "visitor_counter": "Calendar/Flip-clock style visual on the desktop background.",
+    "theme_toggle": "Retro physical-switch style toggle for dark/light mode (Dark mode reverses Beige/Cream to Deep Charcoal/Olive).",
+    "skills_progress": "Vintage segmented loading bars or progress blocks."
+  },
+  "media": {
+    "fonts": [
+      "https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Mono&display=swap"
+    ],
+    "icons_libraries": ["lucide-react", "react-icons"]
+  },
+  "testing": {
+    "attributes": "All interactive elements (folders, window controls, terminal input, command palette items) MUST have data-testid attributes."
+  },
+  "instructions_to_main_agent": [
+    "1. Inject Google Fonts (VT323, IBM Plex Sans, Space Mono) into the global CSS or index.html.",
+    "2. Setup Tailwind config with the custom colors defined in this JSON.",
+    "3. Build a central Desktop environment component to house the grid, icons, and serve as the boundary constraints for Framer Motion (useRef).",
+    "4. Create a reusable Window component (DraggableWindow) using framer-motion. It must support drag, minimize (scale down/hide to taskbar), maximize (fill Desktop), and close actions.",
+    "5. The Window header MUST be the drag handle (dragListener on header, drag={true} on window shell) to prevent selecting text from moving the window.",
+    "6. Build specific components for each 'App' (Terminal, Resume Viewer, Recruiter Mode, Contact Form).",
+    "7. For missing image assets, rely on CSS-styled typography, retro UI patterns, and Lucide/react-icons to maintain the vintage OS illusion."
+  ]
+}
