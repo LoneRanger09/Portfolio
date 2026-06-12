@@ -6,7 +6,7 @@ export function Taskbar({ openWindows, onRestore, onToggleTheme, theme, visitors
     return (
         <div
             data-testid="taskbar"
-            className="taskbar absolute bottom-0 left-0 right-0 h-14 px-3 sm:px-4 flex items-center gap-2 sm:gap-4 z-[100]"
+            className="taskbar absolute bottom-0 left-0 right-0 h-14 pl-3 pr-3 sm:pl-4 sm:pr-[210px] flex items-center gap-2 sm:gap-3 z-[100]"
         >
             <button
                 data-testid="taskbar-start"
