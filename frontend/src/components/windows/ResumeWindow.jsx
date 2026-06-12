@@ -52,9 +52,7 @@ export function ResumeWindow() {
                     <div className="text-sm">{PROFILE.email}</div>
                     <div className="text-sm">{PROFILE.phone}</div>
                 </div>
-                <div className="text-xs text-ink-soft pt-2 border-t border-ink/30">
-                    📄 placeholder resume — replace with your real PDF link in <span className="text-coral">data/portfolio.js</span>.
-                </div>
+                
             </div>
         </div>
     );

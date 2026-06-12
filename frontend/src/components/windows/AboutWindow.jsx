@@ -29,9 +29,7 @@ export function AboutWindow() {
                     <div className="mt-2 flex flex-wrap gap-2">
                         <ProfileLink label="GitHub" href={PROFILE.socials.github} icon={<Github className="w-4 h-4" />} />
                         <ProfileLink label="LinkedIn" href={PROFILE.socials.linkedin} icon={<Linkedin className="w-4 h-4" />} />
-                        <ProfileLink label="LeetCode" href={PROFILE.socials.leetcode} icon={<ExternalLink className="w-4 h-4" />} />
-                        <ProfileLink label="Codeforces" href={PROFILE.socials.codeforces} icon={<ExternalLink className="w-4 h-4" />} />
-                        <ProfileLink label="HackerRank" href={PROFILE.socials.hackerrank} icon={<ExternalLink className="w-4 h-4" />} />
+                        <ProfileLink label="Codechef" href={PROFILE.socials.CodeChef} icon={<ExternalLink className="w-4 h-4" />} />
                     </div>
                 </div>
             </div>

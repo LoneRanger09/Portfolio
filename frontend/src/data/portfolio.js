@@ -6,18 +6,16 @@ export const PROFILE = {
     universityShort: "SLIET",
     graduation: "Batch '26",
     location: "Punjab, India",
-    email: "arnav.kumar@example.com",
-    phone: "+91 90000-00000",
+    email: "arnavkumar1530@gmail.com",
+    phone: "+91 8298114387",
     intro:
-        "I am a Computer Science Engineering student passionate about software development, AI, machine learning, web technologies, and solving real-world problems through technology.",
+        "I am a Computer Science Engineering student passionate about software development, AI, machine learning, Web technologies, and solving real-world problems through technology.",
     avatar:
         "https://api.dicebear.com/7.x/avataaars/svg?seed=ArnavKumar&backgroundColor=E9C46A,F9F6F0,E07A5F&radius=50",
     socials: {
-        github: "https://github.com/arnavkumar",
-        linkedin: "https://linkedin.com/in/arnavkumar",
-        leetcode: "https://leetcode.com/arnavkumar",
-        codeforces: "https://codeforces.com/profile/arnavkumar",
-        hackerrank: "https://hackerrank.com/arnavkumar",
+        github: "https://github.com/LoneRanger09",
+        linkedin: "https://www.linkedin.com/in/arnav-kumar-4aa662336/",
+        CodeChef: "https://www.codechef.com/users/captaincode09"
     },
 };
 
@@ -25,62 +23,60 @@ export const SKILLS = [
     {
         category: "Programming Languages",
         items: [
-            { name: "Java", level: 88 },
             { name: "Python", level: 85 },
-            { name: "C++", level: 78 },
-            { name: "JavaScript", level: 82 },
-            { name: "TypeScript", level: 70 },
+            { name: "Java", level: 76 },
+            { name: "C++", level: 60 },
+            { name: "TypeScript", level: 55 },
         ],
     },
     {
         category: "Frontend",
         items: [
-            { name: "React", level: 88 },
-            { name: "Angular", level: 80 },
-            { name: "Tailwind CSS", level: 90 },
             { name: "HTML / CSS", level: 92 },
-            { name: "Next.js", level: 65 },
+            { name: "Angular", level: 80 },
+            { name: "Tailwind CSS", level: 86 },
+            { name: "React", level: 70 },
         ],
     },
     {
         category: "Backend & DB",
         items: [
-            { name: "Node.js / Express", level: 75 },
-            { name: "REST APIs", level: 82 },
-            { name: "MongoDB", level: 78 },
-            { name: "PostgreSQL", level: 70 },
-            { name: "MySQL", level: 72 },
+            { name: "MySQL", level: 82 },
+            { name: "Node.js / Express", level: 50 },
+            { name: "REST APIs", level: 50 },
+            { name: "MongoDB", level: 45 },
+            { name: "PostgreSQL", level: 30 },
+            
         ],
     },
     {
         category: "CS Fundamentals",
         items: [
-            { name: "Data Structures", level: 80 },
-            { name: "Algorithms", level: 78 },
-            { name: "OOP", level: 85 },
-            { name: "DBMS", level: 80 },
+            { name: "OOP", level: 80 },
             { name: "Operating Systems", level: 72 },
             { name: "Computer Networks", level: 70 },
+            { name: "DBMS", level: 70 },
+            { name: "Data Structures", level: 55 },
+            { name: "Algorithms", level: 20 },
         ],
     },
     {
         category: "AI / ML",
         items: [
-            { name: "Python (ML)", level: 75 },
+            { name: "Python (ML)", level: 80 },
             { name: "Pandas / NumPy", level: 78 },
-            { name: "Scikit-learn", level: 68 },
-            { name: "TensorFlow", level: 55 },
+            { name: "Scikit-learn", level: 58 },
+            { name: "TensorFlow", level: 45 },
         ],
     },
     {
         category: "Tools",
         items: [
-            { name: "Git / GitHub", level: 88 },
-            { name: "Docker", level: 60 },
             { name: "VS Code", level: 95 },
+            { name: "Git / GitHub", level: 88 },
             { name: "Linux", level: 75 },
-            { name: "Postman", level: 80 },
-            { name: "Figma", level: 65 },
+            { name: "Figma", level: 70 },
+            { name: "Docker", level: 60 },
         ],
     },
 ];
@@ -141,32 +137,24 @@ export const PROJECTS = [
 export const EXPERIENCE = [
     {
         role: "Software Development Intern",
-        company: "Acme Software Pvt. Ltd.",
+        company: "Vaizle - Your Marketing Analyst",
         period: "Summer 2025",
         bullets: [
-            "Built responsive web applications with Angular and React.",
+            "Built responsive web applications with Angular .",
             "Improved page-load performance by 38% via code-splitting and lazy routes.",
-            "Collaborated with a 6-person team using Git, Jira and code reviews.",
+            "Collaborated with a 6-person team using Git",
         ],
     },
     {
-        role: "Open Source Contributor",
-        company: "Various GitHub Orgs",
-        period: "2024 — Present",
+        role: "Robotics",
+        company: "Endeavour Robotics Club, SLIET",
+        period: "2023 — Present",
         bullets: [
-            "Merged 20+ pull requests across docs, UI fixes and small features.",
-            "Maintainer on 2 personal repos with 50+ combined stars.",
+            "Designed and programmed autonomous robots for national competitions using C++ and Arduino.",
+            "Led a team of 4 in the Plasma Pull event, achieving 1st place at the university level.",
         ],
     },
-    {
-        role: "Freelance Web Developer",
-        company: "Independent",
-        period: "2024 — Present",
-        bullets: [
-            "Delivered 4 client websites — portfolios, landing pages, dashboards.",
-            "Handled requirement gathering, UI design, deployment and post-launch fixes.",
-        ],
-    },
+
 ];
 
 export const ACHIEVEMENTS = [

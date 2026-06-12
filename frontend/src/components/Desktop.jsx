@@ -56,7 +56,7 @@ export default function Desktop() {
 
     // Typing animation in hero
     useEffect(() => {
-        const phrase = `> hello, i'm ${PROFILE.name}. welcome to my desktop.`;
+        const phrase = `> Kuddos, i'm ${PROFILE.name}. Welcome to my Desktop.`;
         let i = 0;
         const id = setInterval(() => {
             i++;
