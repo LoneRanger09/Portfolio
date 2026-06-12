@@ -1,82 +1,63 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
-    content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./public/index.html"
-  ],
-  theme: {
-    extend: {
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
-      },
-      colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
+    content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+    theme: {
+        extend: {
+            fontFamily: {
+                pixel: ["VT323", "monospace"],
+                sans: ["'IBM Plex Sans'", "sans-serif"],
+                mono: ["'Space Mono'", "monospace"],
+            },
+            colors: {
+                desktop: "#F9F6F0",
+                cream: "#FAFAF7",
+                bone: "#E5E0D8",
+                olive: "#7F8766",
+                "olive-dark": "#6B7355",
+                "olive-deep": "#4F5641",
+                coral: "#E07A5F",
+                mustard: "#E9C46A",
+                ink: "#333333",
+                "ink-soft": "#666666",
+                danger: "#D62828",
+                "term-bg": "#1E1E1E",
+                "term-text": "#4AF626",
+                background: "hsl(var(--background))",
+                foreground: "hsl(var(--foreground))",
+                card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+                popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
+                primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))" },
+                secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
+                muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
+                accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
+                destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
+                border: "hsl(var(--border))",
+                input: "hsl(var(--input))",
+                ring: "hsl(var(--ring))",
+            },
+            borderRadius: {
+                lg: "var(--radius)",
+                md: "calc(var(--radius) - 2px)",
+                sm: "calc(var(--radius) - 4px)",
+            },
+            boxShadow: {
+                retro: "4px 4px 0px rgba(51,51,51,0.55)",
+                "retro-sm": "2px 2px 0px rgba(51,51,51,0.55)",
+                "retro-lg": "6px 6px 0px rgba(51,51,51,0.55)",
+            },
+            keyframes: {
+                "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
+                "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
+                blink: { "0%,49%": { opacity: 1 }, "50%,100%": { opacity: 0 } },
+                "scan-lines": { "0%": { backgroundPositionY: "0" }, "100%": { backgroundPositionY: "4px" } },
+            },
+            animation: {
+                "accordion-down": "accordion-down 0.2s ease-out",
+                "accordion-up": "accordion-up 0.2s ease-out",
+                blink: "blink 1s steps(1) infinite",
+            },
         },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'
-        },
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
-        },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))'
-        }
-      },
-      keyframes: {
-        'accordion-down': {
-          from: {
-            height: '0'
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)'
-          }
-        },
-        'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)'
-          },
-          to: {
-            height: '0'
-          }
-        }
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
-      }
-    }
-  },
-  plugins: [require("tailwindcss-animate")],
+    },
+    plugins: [require("tailwindcss-animate")],
 };
