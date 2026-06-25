@@ -11,7 +11,7 @@ export const PROFILE = {
     intro:
         "I am a Computer Science Engineering student passionate about software development, AI, machine learning, Web technologies, and solving real-world problems through technology.",
     avatar:
-        "https://api.dicebear.com/7.x/avataaars/svg?seed=ArnavKumar&backgroundColor=E9C46A,F9F6F0,E07A5F&radius=50",
+        "/profile.png",
     socials: {
         github: "https://github.com/LoneRanger09",
         linkedin: "https://www.linkedin.com/in/arnav-kumar-4aa662336/",
@@ -83,54 +83,24 @@ export const SKILLS = [
 
 export const PROJECTS = [
     {
-        id: "ai-resume",
-        title: "AI Resume Analyzer",
+        id: "invoice-generator",
+        title: "Invoice Generator",
         description:
-            "NLP-based resume scoring tool that highlights missing keywords, role fit, and improvement tips powered by a custom Python pipeline.",
-        stack: ["Python", "NLP", "scikit-learn", "FastAPI", "React"],
-        github: "https://github.com/arnavkumar/ai-resume-analyzer",
-        demo: "https://example.com/ai-resume",
-        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=70",
+            "A web-based invoice generator enabling users to create, customize, and download professional PDF invoices with real-time tax/discount calculations.",
+        stack: ["React", "Node.js", "Tailwind CSS", "jsPDF"],
+        github: "https://github.com/LoneRanger09/invoice-generator",
+        demo: "https://example.com/invoice-generator",
+        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=70",
     },
     {
-        id: "placement-portal",
-        title: "Full-Stack Placement Portal",
+        id: "url-shortener",
+        title: "URL Shortener",
         description:
-            "End-to-end placement workflow for a university — student onboarding, recruiter pipelines, interview rounds, analytics dashboards.",
-        stack: ["React", "Node.js", "Express", "MongoDB"],
-        github: "https://github.com/arnavkumar/placement-portal",
-        demo: "https://example.com/placement",
-        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=70",
-    },
-    {
-        id: "leetcode-tracker",
-        title: "LeetCode Tracker",
-        description:
-            "Track daily LeetCode streaks, topic-wise heatmaps, and contest history. Connects to public LeetCode APIs.",
-        stack: ["Next.js", "REST APIs", "Tailwind"],
-        github: "https://github.com/arnavkumar/leetcode-tracker",
-        demo: "https://example.com/lc-tracker",
-        image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=900&q=70",
-    },
-    {
-        id: "chat-app",
-        title: "Realtime Chat Application",
-        description:
-            "Channels, DMs, typing indicators, presence — built with Socket.io and a React front-end with optimistic updates.",
-        stack: ["React", "Socket.io", "Node.js"],
-        github: "https://github.com/arnavkumar/chat-app",
-        demo: "https://example.com/chat",
-        image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=900&q=70",
-    },
-    {
-        id: "expense-tracker",
-        title: "MERN Expense Tracker",
-        description:
-            "Personal finance tracker with categories, budgets, monthly insights, and CSV export — secure auth and JWT sessions.",
-        stack: ["MongoDB", "Express", "React", "Node"],
-        github: "https://github.com/arnavkumar/expense-tracker",
-        demo: "https://example.com/expense",
-        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=70",
+            "A fast URL shortening service featuring click metrics tracking, custom alias generation, and QR codes for simplified link sharing.",
+        stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+        github: "https://github.com/LoneRanger09/url-shortener",
+        demo: "https://example.com/url-shortener",
+        image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=900&q=70",
     },
 ];
 
@@ -158,28 +128,17 @@ export const EXPERIENCE = [
 ];
 
 export const ACHIEVEMENTS = [
-    { icon: "🏆", title: "500+ LeetCode Problems", detail: "Across topics and contests" },
-    { icon: "⭐", title: "5★ HackerRank", detail: "Problem Solving + Java" },
-    { icon: "🥇", title: "Hackathon Finalist", detail: "Top-10 university level" },
-    { icon: "🚀", title: "Top 10 Coding Contest", detail: "SLIET annual coding meet" },
-    { icon: "🌿", title: "Open Source Contributor", detail: "20+ PRs merged" },
-    { icon: "📄", title: "Research Paper", detail: "ML for academic prediction" },
+    { icon: "🥇", title: "First Place", detail: "Techfest, IIT Roorkee" },
 ];
 
-export const CERTIFICATIONS = [
-    { title: "AWS Cloud Practitioner", issuer: "Amazon Web Services", year: "2024" },
-    { title: "Google Data Analytics", issuer: "Coursera / Google", year: "2024" },
-    { title: "Meta Frontend Developer", issuer: "Coursera / Meta", year: "2025" },
-    { title: "Machine Learning Specialization", issuer: "DeepLearning.AI", year: "2025" },
-    { title: "Python for Everybody", issuer: "University of Michigan", year: "2023" },
-];
+export const CERTIFICATIONS = [];
 
 export const ICONS = [
     { id: "about", label: "About Me" },
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
-    { id: "certifications", label: "Certifications" },
+    // { id: "certifications", label: "Certifications" },
     { id: "achievements", label: "Achievements" },
     { id: "resume", label: "Resume" },
     { id: "contact", label: "Contact" },
